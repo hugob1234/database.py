@@ -1,4 +1,4 @@
-def remove_record(name, age, address):
+ def remove_record(name, age, address):
     with open("data.txt", "r") as file:
         lines = file.readlines()
     with open("data.txt", "w") as file:
@@ -37,5 +37,5 @@ elif option == "3":
     last = str(input("Enter postcode: "))
     check(qu, age, last)
 else:
-    print("EERRRRRRRROOOOORRRRRRR")
+    print("Error")
     
