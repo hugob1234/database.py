@@ -18,7 +18,7 @@ def check(name, age, address):
 
 
 print("File manager")
-option = input("Enter option (1 for adding record, 2 for removing record): ")
+option = input("Enter option (1 for adding record, 2 for removing record, 3 for checking if your record is in database): ")
 
 if option == "1":
     qu = str(input("Enter your full name: "))
