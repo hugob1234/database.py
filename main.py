@@ -3,7 +3,7 @@ def remove_record(name, age, address):
         lines = file.readlines()
     with open("data.txt", "w") as file:
         for line in lines:
-            if f"full name: {name}   age: {age}   address: {address}\n" not in line:
+            if (f"full name: {name}   age: {age}   address: {address}\n") not in line:
                 file.write(line)
 
 def check(name, age, address):
