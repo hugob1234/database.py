@@ -18,13 +18,13 @@ def check(name, age, address):
 
 
 print("File manager")
-option = input("Enter option (1 for adding record, 2 for removing record, 3 for checking if your record is in database): ")
-n = int(input(f"How many pieces of data would you like to add/remove/check using option {option}: "))
-while ((option != "1") and (option != "2") and (option != "3")):
-    option = input("Option picked not valid , Enter option (1 for adding record, 2 for removing record, 3 for checking if your record is in database): ")
-    n = int(input(f"Enter how many pieces of data you would like to add/remove/check using option {option}: "))
+option = input("Enter option (add for adding record, remove for removing record, check for checking if your record is in database): ")
+n = int(input(f"How many pieces of data would you like to {option}: "))
+while ((option != "add") and (option != "remove") and (option != "check")):
+    option = input("Option picked not valid , Enter option (add for adding record, remove for removing record, check for checking if your record is in database): ")
+    n = int(input(f"Enter how many pieces of data would you like to {option}: "))
 
-if option == "1":
+if option == "add":
     for i in range(n):
         qu = str(input("Enter your full name: "))
         age = int(input("Enter age: "))
@@ -32,13 +32,13 @@ if option == "1":
         with open("data.txt", "a") as file:
             file.write(f"full name: {qu}   age: {age}   address: {last}\n")
     print(f"successfully added data.")
-elif option == "2":
+elif option == "remove":
     for i in range(n):
         qu = str(input("Enter your full name: "))
         age = int(input("Enter age: "))
         last = str(input("Enter postcode: "))
         remove_record(qu, age, last)
-elif option == "3":
+elif option == "check":
     for i in range(n):
         qu = str(input("Enter your full name: "))
         age = int(input("Enter age: "))
