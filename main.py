@@ -19,24 +19,27 @@ def check(name, age, address):
 
 print("File manager")
 option = input("Enter option (1 for adding record, 2 for removing record, 3 for checking if your record is in database): ")
+n = int(input(f"How many pieces of data would you like to add using option {option}: "))
 
 if option == "1":
-    qu = str(input("Enter your full name: "))
-    age = int(input("Enter age: "))
-    last = str(input("Enter postcode: "))
-    with open("data.txt", "a") as file:
-        file.write(f"full name: {qu}   age: {age}   address: {last}\n")
+    for i in range(n):
+        qu = str(input("Enter your full name: "))
+        age = int(input("Enter age: "))
+        last = str(input("Enter postcode: "))
+        with open("data.txt", "a") as file:
+            file.write(f"full name: {qu}   age: {age}   address: {last}\n")
     print("successfully added.")
 elif option == "2":
-    qu = str(input("Enter your full name: "))
-    age = int(input("Enter age: "))
-    last = str(input("Enter postcode: "))
-    remove_record(qu, age, last)
+    for i in range(n):
+        qu = str(input("Enter your full name: "))
+        age = int(input("Enter age: "))
+        last = str(input("Enter postcode: "))
+        remove_record(qu, age, last)
 elif option == "3":
-    qu = str(input("Enter your full name: "))
-    age = int(input("Enter age: "))
-    last = str(input("Enter postcode: "))
-    check(qu, age, last)
+    for i in range(n):
+        qu = str(input("Enter your full name: "))
+        age = int(input("Enter age: "))
+        last = str(input("Enter postcode: "))
+        check(qu, age, last)
 else:
     print("Error")
-    
