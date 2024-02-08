@@ -19,10 +19,10 @@ def check(name, age, address):
 
 print("File manager")
 option = input("Enter option (1 for adding record, 2 for removing record, 3 for checking if your record is in database): ")
-n = int(input(f"How many pieces of data would you like to add using option {option}: "))
+n = int(input(f"How many pieces of data would you like to add/remove/check using option {option}: "))
 while ((option != "1") and (option != "2") and (option != "3")):
     option = input("Option picked not valid , Enter option (1 for adding record, 2 for removing record, 3 for checking if your record is in database): ")
-    n = int(input(f"Enter how many pieces of data would you like to add using option {option}: "))
+    n = int(input(f"Enter how many pieces of data would you like to add/remove/check using option {option}: "))
 
 if option == "1":
     for i in range(n):
