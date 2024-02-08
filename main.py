@@ -32,7 +32,6 @@ elif option == "2":
     age = int(input("Enter age: "))
     last = str(input("Enter postcode: "))
     remove_record(qu, age, last)
-    print("successfully removed.")
 elif option == "3":
     qu = str(input("Enter your full name: "))
     age = int(input("Enter age: "))
